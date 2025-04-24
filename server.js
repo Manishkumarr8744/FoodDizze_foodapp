@@ -148,17 +148,17 @@ passport.deserializeUser(User.deserializeUser());//unstores user credentails and
 
 
 
-
-//root 
-app.get("/",(req,res)=>{
-    res.render("menu/home.ejs")
-})
 app.use((req,res,next)=>{
     res.locals.success=req.flash("success")
     res.locals.error=req.flash("error");
     res.locals.currUser=req.user;
     next()
 })
+//root 
+app.get("/",(req,res)=>{
+    res.render("menu/home.ejs")
+})
+
 
 //index route
 app.get("/menu",async(req,res)=>{
