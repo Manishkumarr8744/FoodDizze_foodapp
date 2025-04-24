@@ -1,0 +1,16 @@
+<% layout("/layout/boilerplate") %>
+<style>
+    body{        height: 100vh !important;
+    }
+.alert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+</style>
+<div class="row mt-3">
+    <div class="alert alert-danger col-6 offset-3 alert-heading" role="alert">
+        <h4 class="alert-heading"><%= statusCode %>: <%= message %></h4>
+    </div>
+    </div>     

@@ -1,0 +1,116 @@
+body{
+    height: 100vh  !important;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    font-family: "Trirong", serif;
+    background: #833AB4;
+background: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 0%, rgba(252, 176, 69, 1) 100%);
+    /* background: url(https://plus.unsplash.com/premium_vector-1738824861248-42413c42f1be?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHJlc3RhdXJhbnQlMjBraXRjaG5lbnxlbnwwfHwwfHx8MA%3D%3D); */
+    /* background: url(https://plus.unsplash.com/premium_vector-1739541998455-673dba749ecf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMGtpdGNobmVufGVufDB8fDB8fHww); */
+}
+
+.row{
+    width: 100% !important;
+}
+.navbar{
+    height: auto;
+    background-color: #FCB454 !important;
+
+}
+.navbar-brand{
+    margin-left: 10px;
+}
+.navbar-brand  i{
+    font-size: 30px;
+}
+.food-card{
+    padding: 0 !important;
+    border-radius:1rem !important ;
+    margin: 10px;
+    background: #FCB454 !important;
+   
+
+    /* background: transparent !important; */
+    width: 22rem !important;
+}
+.card-body{
+    padding: 0 !important;
+    background: #FCB454 !important;
+    border-radius:1rem !important ;
+}
+.card{
+    margin-bottom: 4rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-title{
+    margin-top: 0.5rem !important;
+    margin-left: 1rem !important;
+    font-size: 30px;
+}
+.card-text{
+    margin-left: 1rem !important;
+}
+.card-text p{
+    font-weight: 400 !important;
+}
+.card-img-top{
+    transition: transform 0.3s ease !important;
+
+}
+
+.card-img-top:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    /* background: rgb(255, 255, 255); */
+}
+footer{
+    
+    width: 100%;
+    bottom: 0%;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+    
+}
+.f-info{
+    height: 10rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: space-evenly; */
+    text-align: center;
+    align-self: center;
+}
+.f-info-links{
+    width: 100%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.f-info-socials,.f-info-brand{
+    width: 100%;
+    font-size: 1.3rem;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.f-info-socials i{
+    margin-right: 1rem;
+    font-size: 1.3rem;
+}

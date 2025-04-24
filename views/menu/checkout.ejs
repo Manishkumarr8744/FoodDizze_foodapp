@@ -1,0 +1,81 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+<style>
+   
+.main{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerr{
+    display: flex;
+    flex-direction: column;
+}
+.checkout-box{
+   margin: 80px;
+    background-color:#FCB454;
+    border-radius: 20px;
+   
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.checkout-box h2{
+    top: 0px;
+}
+.cart-item{
+    margin-top: 10px;
+}
+.btn-success{
+    margin-bottom: 1rem;
+}
+
+
+</style>
+
+
+<div class="checkout-box">
+    <% if (cart.length > 0) { %>
+        <h1>Your Cart Items</h1> 
+       
+        <% cart.forEach(item => { %>
+            <div class="cart-item">
+                 
+                <div class="cart-item-details">
+                    
+                        <b><p style="display: inline ;font-size: 1.5rem; text-align: center;">
+                            
+                        Item: <%= item.name %>&nbsp<%= item.quantity %>X  &nbsp;&nbsp;&nbsp;&nbsp; : &#8377;<%= item.price %>&nbspX<%= item.quantity %> <form style="display: inline; " method="post" action="/menu/checkout/remove/<%= item.id %>"><button style="padding: 0.5rem;width: 2.5rem; text-align: center; margin-bottom: 15px;" type="submit" class="btn btn-danger">X</button></form>
+                        <hr>
+                    </p></b>
+                
+                   
+                 
+                </div>
+            </div>
+        <% }) %>
+        <div class="total" style="font-size: 2rem;  ">
+            <hr><hr>
+            Total: &#8377;<%= cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2) %>/-
+           
+            <form style="display: flex;justify-content: center; align-items: center; margin-top: 1rem;"  method="post" action="/menu/placeorder">
+                <button  class="btn btn-success">Checkout</button>
+        </form>
+        </div>
+    <% } else { %>
+        <i><h2 class="empty-cart">Your cart is empty.</h2></i>
+        <form style="display: inline;" method="get" action="/menu">
+            <br>
+            <button style="margin-bottom: 1rem;" class="btn btn-primary">Back To Menu</button>
+            
+    </form>
+        <% } %>
+</div>
+
+
