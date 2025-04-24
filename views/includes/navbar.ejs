@@ -14,13 +14,13 @@
         
         <div class="navbar-nav ms-auto">
           
-           <% if(!req.user){ %>
+           <% if(!currUser){ %>
             <button style="width: 6rem;" class="btn btn-primary">  <a style="color: white; text-decoration: none; text-align: center;" href="/menu/signup">Sign Up</a>
             </button>
             <button style="margin-left: 1rem;" class="btn btn-success">   <a  style="color: white; text-decoration: none;" href="/menu/login">Login</a>
             </button>
            <% } %>
-           <% if(req.user){ %>
+           <% if(currUser){ %>
             <button class="btn btn-primary">              <a  style="color: white; text-decoration: none;" href="/menu/checkout">Checkout</a>
             </button>
             <button  style="margin-left: 1rem;" class="btn btn-danger">              <a  style="color: white; text-decoration: none;" href="/menu/logout">Logout</a>
